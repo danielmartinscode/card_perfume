@@ -1,0 +1,116 @@
+@use '../abstract/variaveis';
+
+.produto {
+    background-color: variaveis.$branco;
+    width: 21.875rem;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 50vw;
+    @media  screen and (min-width:1200px) {
+        flex-direction: row; 
+        height: 80vh;
+        width: 70vw;
+    }
+
+    .imagem-produto{
+        background-image: url(../images/image-product-desktop.jpg);
+        height: 100%;
+        width: 100%;
+        background-position: top 30% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .descricao-produto {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        
+        @media screen and (min-width:1200px) {
+            margin: auto auto;
+            padding: 2.5rem;
+        }
+        .categoria {
+            font-family: variaveis.$ft-montserrat;
+            text-transform: uppercase;
+            color: variaveis.$cinza;
+            letter-spacing: .3rem;
+            font-weight: 500;
+            margin-top: 0;
+        }
+        h2 {
+            font-family: variaveis.$ft-fraunces;
+            font-size: 2rem;
+            margin: 0;
+            @media screen and (min-width:1200px) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .descricao {
+            font-family: variaveis.$ft-montserrat;
+            color: variaveis.$cinza;
+            line-height: 24px;
+            font-size: 16px;
+            @media screen and (min-width:1200px) {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    .preco {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        gap: 1rem;
+
+        .preco-atual {
+            font-family: variaveis.$ft-fraunces;
+            font-size: 2.3rem;
+            color: variaveis.$verde-primario;
+            font-weight: 700;
+            @media screen and (min-width:1200px) {
+                font-size: 3rem;
+            }
+        }
+
+        .preco-antigo {
+            font-family: variaveis.$ft-fraunces;
+            font-size: .9rem;
+            color: variaveis.$cinza;
+            text-decoration: line-through;
+            @media screen and (min-width:1200px) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .botao {
+        padding: 12px 0;
+        .botao-comprar {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: variaveis.$verde-primario;
+            color: variaveis.$branco;
+            font-family: variaveis.$ft-montserrat;
+            font-weight: 700;
+            font-size: 14px;
+            background-image: url(../images/icon-cart.svg);
+            background-repeat: no-repeat;
+            background-position: 85px center;
+        }
+
+        :hover {
+            background-color: variaveis.$verde-secundario;
+        }
+    }
+}
+
+

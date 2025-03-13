@@ -1,0 +1,17 @@
+@use 'variaveis';
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: variaveis.$cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (width >= 768px){
+  
+}
